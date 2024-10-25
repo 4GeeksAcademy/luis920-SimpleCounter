@@ -1,24 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Timer from "./Timer.jsx";
+import Button from "./Button.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+const Home = () => { 
+	const [seconds,setSeconds] =useState(0)
+	const [minuts,setMinuts] =useState(0)
+	const [hours,setHours] =useState(0)
 
-//create your first component
-const Home = () => {
+	useEffect(()=>{
+		
+	})
+
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="timer-container" >
+			<Timer/>
+			<div >
+				<h1>Timer</h1>
+				<h2>10:30:25</h2>
+			  <Button title={"Iniciar"}/>	
+			  <Button title={"Detener"}/>
+			  <Button title={"Reinicar"}/>	
+			</div>
+			
 		</div>
 	);
 };
