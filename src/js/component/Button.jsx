@@ -5,7 +5,7 @@ const Button = (props)=>{
    
     return(
         <div className="container-buttons">
-            <button type="button" class="btn btn-primary  btn-lg  ">{title}</button>
+            <button type="button" className="btn btn-primary  btn-lg  ">{title}</button>
         </div>
     )
 }
